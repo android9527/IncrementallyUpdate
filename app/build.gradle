@@ -11,10 +11,10 @@ android {
         versionCode 1
         versionName "1.0"
 
-        ndk{
-            moduleName "ApkPatchLibrary"
-            abiFilters "armeabi", "armeabi-v7a", "x86"
-        }
+//        ndk{
+//            moduleName "ApkPatchLibrary"
+//            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+//        }
     }
     buildTypes {
         release {
@@ -24,8 +24,8 @@ android {
     }
     sourceSets {
         main {
-            jni.srcDirs = ['src/main/jni', 'src/main/jni/']
-            // jniLibs.srcDirs = ['libs'] // 若不想编译jni代码，可直接引用so库，ndk编译相关脚本注释掉
+//            jni.srcDirs = ['src/main/jni', 'src/main/jni/']
+            jniLibs.srcDirs = ['libs'] // 若不想编译jni代码，可直接引用so库，ndk编译相关脚本注释掉
         }
     }
 }
